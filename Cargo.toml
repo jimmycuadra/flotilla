@@ -1,0 +1,10 @@
+[package]
+name = "flotilla"
+version = "0.1.0"
+authors = ["Jimmy Cuadra <jimmy@jimmycuadra.com>"]
+description = "Versioned application deployment and simple scaling for CoreOS."
+license = "MIT"
+readme = "README.md"
+keywords = ["containers", "coreos", "fleet", "systemd"]
+repository = "https://github.com/jimmycuadra/flotilla"
+homepage = "https://github.com/jimmycuadra/flotilla"
