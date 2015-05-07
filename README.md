@@ -36,13 +36,13 @@ Conflicts={{ service }}@*.service
 Save the file as `myapp@.service` and submit the unit to the cluster by running:
 
 ``` bash
-flot service add myorg/myapp myapp@.service
+flot add myorg/myapp myapp@.service
 ```
 
 This assumes the image is hosted on the Docker Hub. To use a different registry, specify a hostname or IP:
 
 ``` bash
-flot service add example.com/myorg/myapp myapp@.service
+flot add example.com/myorg/myapp myapp@.service
 ```
 
 Now deploy the latest version of your app (in this example, tag 21d1f49) to the cluster:
@@ -79,19 +79,19 @@ If a previous version of the service was running when this deploy took place, an
 Now that your service is running, you can scale it up:
 
 ``` bash
-flot service scale myorg/myapp 3
+flot scale myorg/myapp 3
 ```
 
 This will start 2 additional instances of the service on the cluster for a total of 3. You can scale the service back down (even to zero instances, effectively stopping it):
 
 ```
-corecl service scale myorg/myapp 1
+flot scale myorg/myapp 1
 ```
 
 If you don't need a service anymore, you can remove it:
 
 ```
-flot service remove myorg/myapp
+flot remove myorg/myapp
 ```
 
 This will stop any instances of the service that are still running and delete the unit file from the cluster.
